@@ -1,0 +1,62 @@
+{% extends "base.html.twig" %}
+
+{% block customheader %}
+<div id="custom-header" class="site-background" data-image="{{ asset('img/Incas_Apartment_by_tsabo6.jpg') }}" data-opacity="0.9" data-color="181a25">
+    <!-- BEGIN #tagline -->
+    <div id="tagline" class="site-tagline row">
+        <h1>
+            Contacto
+        </h1>
+        <h2>¿Dudas? ¿Sugerencias? ¿Quejas airadas?</h2>
+    </div>
+</div>
+{% endblock %}
+
+{% block body %}
+    <div class="contact-inner">
+        <div class="large-8 columns">
+
+            <h5 class="contact-header">Usa el formulario para contactarte conmigo</h5>
+
+            <div id="notice" style="color: #00b8a5;text-align:center;"></div>
+
+        <form id="contactForm" action="https://formspree.io/khan.maytok@gmail.com" method="post">        
+            <label for="name">Nombre <span class="required">*</span></label>
+            <input type="text" class="input-field" id="name" name="name" value="" required="required" placeholder="Tu nombre">
+
+            <label for="email">Email <span class="required">*</span></label>
+            <input type="email" class="input-field" id="email" name="email" value="" required="required" placeholder="Tu email">
+
+            <label for="subject">Asunto <span class="required">*</span></label>
+            <input type="text" class="input-field" name="subject" id="subject" value="" placeholder="Asunto" required="required">
+
+            <label for="message">Mensaje <span class="required">*</span></label>
+            <textarea id="message" name="message" cols="10" rows="20" placeholder="Escribe aquí el mensaje" required="required"></textarea>
+            <button type="submit" id="submit">
+                <i class="fa fa-envelope"></i>
+                <span>Enviar mensaje</span>
+            </button>
+            <span id="loading"></span>
+        </form>
+        
+      </div>
+      <!-- END /contact-inner -->
+      <!-- BEGIN #sidebar -->
+        <div id="sidebar" class="large-4 columns">
+            <div id="office">
+                <h6>El autor</h6>
+                <div id="bl_author-2" class="box bl_author">
+                    <img src="{{ asset('img/gal2.jpg') }}" alt="Fondo del autor">
+                    <div class="widget-body"><div class="bl_author_img">
+                      <img src="{{ asset('img/profile-photo.jpg') }}" alt="Giancarlo Ventura">
+                    </div>
+                    <div class="bl_author_bio">
+                        <h3>Gian Ventura</h3>
+                        <p class="muted">Programador compulsivo. Apasionado de la escritura. Adicto a correr en lugares insospechados.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+{% endblock %}

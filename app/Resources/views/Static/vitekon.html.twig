@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Lista de avances</title>
+</head>
+<body>
+	<h1>LISTA DE AVANCES EN VITEKEY</h1>
+	<h3>Si se quiere ver más detalles, iniciar sesión pe causha</h3>
+	{% for item in commits %}
+		<li><strong>{{item.commit.message}}</strong>  ({{item.commit.author.date | date}})</li>
+		<li>Lineas añadidas : {{item.stats.additions}}</li>
+		<li>Lineas borradas : {{item.stats.deletions}}</li>
+		<hr>
+	{% endfor %}
+</body>
+</html>

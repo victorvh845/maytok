@@ -1,0 +1,5 @@
+{% for article in articles %}
+	<div class="grid-3">
+		<h4 class="category-name"><a href="{{ path('wiki_articulo', {'slug': article.slug}) }}">{{ article.name }}</a></h4>
+	</div>
+{% endfor %}

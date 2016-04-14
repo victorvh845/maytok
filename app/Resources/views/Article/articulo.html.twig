@@ -1,0 +1,662 @@
+<!doctype html>
+
+<!--[if IE 8]> <html class="ie8 desktop" lang="es"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="desktop no-js" lang="es"> <!--<![endif]-->
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta property="og:description" content="{{ article.content | slice(0,50) }}" />
+  <meta property="fb:app_id" content="test" />
+  <meta property="og:image" content="{{ article.image }}" />
+  <meta property="og:site_name" content="Valonde" />
+  <meta property="og:title" content="{{ article.name }}" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="http://www.valonde.com/" />
+  <meta name="description" content="Prototipo de descripcion" />
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:url" content="http://www.valonde.com/" />
+  <meta name="twitter:title" content="{{ article.name }}" />
+  <meta name="twitter:description" content="Halo 5: Guardians has more weights around its neck than really seems fair.Many Halo fans still feel like the series' adoptive parents at 343 Industries have things to prove, that the developer has..." />
+  <meta name="twitter:image:src" content="{{ article.image }}" />
+  <meta name="twitter:site" content="valonde" />
+  <meta name="twitter:creator" content="sakyastelios" />
+  <link rel="canonical" href="http://www.polygon.com/2015/10/26/9553081/halo-5-guardians-review-xbox-one" />
+  <link rel="shortcut icon" href="https://cdn2.vox-cdn.com/community_logos/42931/favicon.ico" />
+
+  <link rel="apple-touch-icon" href="/images/polygon/apple-touch-icon.png" />
+  <link href="https://cdn0.vox-cdn.com/uploads/hub/sbnu_logo_minimal/405/touch_icon_ipad_retina_1000x1000.7014.png" rel="apple-touch-icon-precomposed" sizes="144x144" type="image/png"/>
+  <link href="https://cdn0.vox-cdn.com/uploads/hub/sbnu_logo_minimal/405/touch_icon_iphone_retina_1000x1000.7014.png" rel="apple-touch-icon-precomposed" sizes="114x114" type="image/png"/>
+  <link href="https://cdn0.vox-cdn.com/uploads/hub/sbnu_logo_minimal/405/touch_icon_ipad_retina_1000x1000.7014.png" rel="apple-touch-icon-precomposed" sizes="72x72" type="image/png"/>
+  <link href="https://cdn0.vox-cdn.com/uploads/hub/sbnu_logo_minimal/405/touch_icon_iphone_retina_1000x1000.7014.png" rel="apple-touch-icon-precomposed" type="image/png"/>
+
+  <title>{{ article.name }} | Valonde</title>
+  <link rel="alternate" type="application/rss+xml" title="Valonde" href="/rss/index.xml" />
+
+  <link rel="stylesheet" href="https://cloud.typography.com/706184/753582/css/fonts.css" type="text/css" />
+
+  <!--[if (gte IE 10)|(IEMobile)|(!IE)]><!-->
+  <link rel="stylesheet" href="{{ asset('css/article-wiki.min.css') }}" />
+  <!--<![endif]-->
+  <meta property="article:published_time" content="2015-10-26T07:01:02Z" />
+  <meta name="author" content="Giancarlo Ventura" />
+</head>
+
+<body class="polygon theme-default review template_review" data-entry-type="review">
+  <div id="body-wrapper" class="l-inner-wrap">
+    <div id="fb-root"></div>
+    <div class="m-site-nav  ">
+      <nav class="m-site-nav__polybar sticky_nav" id="polybar">
+        <div class="m-site-nav__wrapper super">
+          <div class="m-site-nav__item nav-toggle">
+            <a href="#" id="mobile-nav-toggle" class="m-site-nav__mobile-slideout-button">Menu</a>
+          </div>
+          <div id="nav_logo" class="m-site-nav__item logo">
+              <a href="/" class="m-site-nav__logo-link">Valonde</a>
+          </div>
+          <ul class="m-site-nav__list">
+            <li class="m-site-nav__item lazy" id="pane-news" data-pane="news">
+              <a class="m-site-nav__primary-link" href="/news">News</a>
+              <div class="m-site-nav__shelf news">
+                <div class="m-site-nav__sub-menu news">
+                  <ul class="m-site-nav__group-selector">
+                    <li class="group sub-report" data-slug="report">
+                      <a href="/report">Reports</a>
+                    </li>
+                    <li class="group sub-culture" data-slug="culture">
+                      <a href="/culture">Culture</a>
+                    </li>
+                    <li class="group sub-news active" data-slug="news">
+                      <a href="/news">Recent</a>
+                    </li>
+                    <li class="group sub-minimap" data-slug="minimap">
+                      <a href="/minimap">Minimap</a>
+                    </li>
+                    <li class="m-site-nav__group-selector-more-link">
+                      <a href="/news">All News</a>
+                    </li>
+                  </ul>
+                  <div class="m-site-nav__shelf-container"></div>
+                </div>
+              </div>
+            </li>
+            <li class="m-site-nav__item lazy" id="pane-reviews" data-pane="reviews">
+              <a class="m-site-nav__primary-link" href="/games/reviewed">Reviews</a>
+              <div class="m-site-nav__shelf reviews">
+                <div class="m-site-nav__sub-menu reviews">
+                  <ul class="m-site-nav__group-selector">
+                    <li class="group sub-recent active" data-slug="recent">
+                      <a href="/games/reviewed">Recent</a>
+                    </li>
+                    <li class="group sub-nintendo" data-slug="nintendo">
+                      <a href="/games/nintendo/reviewed">Nintendo</a>
+                    </li>
+                    <li class="group sub-playstation" data-slug="playstation">
+                      <a href="/games/playstation/reviewed">Playstation</a>
+                    </li>
+                    <li class="group sub-xbox" data-slug="xbox">
+                      <a href="/games/xbox/reviewed">Xbox</a>
+                    </li>
+                    <li class="group sub-mobile" data-slug="mobile">
+                      <a href="/games/mobile/reviewed">Mobile</a>
+                    </li>
+                    <li class="group sub-pc" data-slug="pc">
+                      <a href="/games/pc/reviewed">PC</a>
+                    </li>
+                    <li class="m-site-nav__group-selector-more-link">
+                      <a href="/games/reviewed">All Reviews</a>
+                    </li>
+                  </ul>
+                  <div class="m-site-nav__shelf-container"></div>
+                </div>
+              </div>
+            </li>
+            <li class="m-site-nav__item lazy" id="pane-features" data-pane="features">
+              <a class="m-site-nav__primary-link" href="/features">Features</a>
+              <div class="m-site-nav__shelf features">
+                <div class="m-site-nav__sub-menu features">
+                  <ul class="m-site-nav__group-selector">
+                    <li class="group sub-this-week active" data-slug="this-week">
+                      <a href="/features">This Week</a>
+                    </li>
+                    <li class="group sub-last-week" data-slug="last-week">
+                      <a href="/features">Last Week</a>
+                    </li>
+                    <li class="group sub-human-angle" data-slug="human-angle">
+                      <a href="/human-angle">Human Angle</a>
+                    </li>
+
+                    <li class="m-site-nav__group-selector-more-link">
+                      <a href="/features">All Features</a>
+                    </li>
+                  </ul>
+                  <div class="m-site-nav__shelf-container"></div>
+                </div>
+              </div>
+            </li>
+            <li class="m-site-nav__item video lazy" id="pane-videos" data-pane="videos">
+              <a class="m-site-nav__primary-link" href="/videos">Videos</a>
+              <div class="m-site-nav__shelf videos">
+                <div class="m-site-nav__sub-menu videos">
+                  <ul class="m-site-nav__group-selector">
+
+                    <li class="group sub-recent active" data-slug="recent">
+                      <a href="/videos">Recent</a>
+                    </li>
+                    <li class="group sub-overview" data-slug="overview">
+                      <a href="/overview">Overview</a>
+                    </li>
+                    <li class="group sub-human-angle" data-slug="human-angle">
+                      <a href="/human-angle">Human Angle</a>
+                    </li>
+                    <li class="m-site-nav__group-selector-more-link">
+                      <a href="/videos">All Videos</a>
+                    </li>
+                  </ul>
+                  <div class="m-site-nav__shelf-container"></div>
+                </div>
+              </div>
+            </li>
+            <li class="m-site-nav__item lazy" id="pane-forums" data-pane="forums">
+              <a class="m-site-nav__primary-link" href="/forums">Forums</a>
+              <div class="m-site-nav__shelf forums">
+                <div class="m-site-nav__sub-menu forums">
+                  <ul class="m-site-nav__group-selector">
+                    <li class="group sub-recent active" data-slug="recent">
+                      <a href="/forums">Recent</a>
+                    </li>
+                    <li class="group sub-polynauts" data-slug="polynauts">
+                      <a href="/forums/polynauts">Polynauts</a>
+                    </li>
+                    <li class="group sub-off-topic" data-slug="off-topic">
+                      <a href="/forums/off-topic">Off-Topic</a>
+                    </li>
+                    <li class="group sub-ps4" data-slug="ps4">
+                      <a href="/forums/ps4">Playstation 4</a>
+                    </li>
+                    <li class="group sub-xb1" data-slug="xb1">
+                      <a href="/forums/xbox-one">Xbox One</a>
+                    </li>
+                    <li class="group sub-wiiu" data-slug="wiiu">
+                      <a href="/forums/wii-u">Wii U</a>
+                    </li>
+                    <li class="group sub-meta" data-slug="meta">
+                      <a href="/forums/meta">Meta</a>
+                    </li>
+                    <li class="m-site-nav__group-selector-more-link">
+                      <a href="/forums">All Forums</a>
+                    </li>
+                  </ul>
+                  <div class="m-site-nav__shelf-container"></div>
+                </div>
+              </div>
+            </li>
+            <li class="m-site-nav__item lazy" id="pane-opinion" data-pane="opinion">
+              <a class="m-site-nav__primary-link" href="/opinion">Opinion</a>
+              <div class="m-site-nav__shelf news">
+                <div class="m-site-nav__sub-menu opinion">
+                  <ul class="m-site-nav__group-selector">
+                    <li class="group sub-opinion active" data-slug="opinion">
+                      <a href="/opinion">Opinion</a>
+                    </li>
+                    <li class="group sub-quality-control" data-slug="quality-control">
+                      <a href="/quality-control">Quality Control</a>
+                    </li>
+                    <li class="m-site-nav__group-selector-more-link">
+                      <a href="/opinion">All Opinion</a>
+                    </li>
+                  </ul>
+                  <div class="m-site-nav__shelf-container"></div>
+                </div>
+              </div>
+            </li>
+            <li class="m-site-nav__item platforms">
+              <a class="m-site-nav__primary-link" href="/games">Platforms</a>
+              <div class="m-site-nav__shelf platforms">
+                <div class="m-site-nav__sub-menu platforms">
+                  <ul class="m-site-nav__shelf-entries platforms">
+                    <li class="m-site-nav__entry platforms">
+                      <ul class="m-site-nav__platform-list">
+                        <li class="m-site-nav__platform-group"><a href="/nintendo">Nintendo</a></li>
+                        <li class="m-site-nav__platform"><a href="/wii-u">Wii U</a></li>
+                        <li class="m-site-nav__platform"><a href="/wii">Wii</a></li>
+                        <li class="m-site-nav__platform"><a href="/3ds">3DS</a></li>
+                      </ul>
+                    </li>
+                    <li class="m-site-nav__entry platforms">
+                      <ul class="m-site-nav__platform-list">
+                        <li class="m-site-nav__platform-group"><a href="/playstation">Playstation</a></li>
+                        <li class="m-site-nav__platform"><a href="/ps4">Playstation 4</a></li>
+                        <li class="m-site-nav__platform"><a href="/ps3">Playstation 3</a></li>
+                        <li class="m-site-nav__platform"><a href="/vita">Playstation Vita</a></li>
+                      </ul>
+                    </li>
+                    <li class="m-site-nav__entry platforms">
+                      <ul class="m-site-nav__platform-list">
+                        <li class="m-site-nav__platform-group"><a href="/xbox">Xbox</a></li>
+                        <li class="m-site-nav__platform"><a href="/xbox-one">Xbox One</a></li>
+                        <li class="m-site-nav__platform"><a href="/xbox-360">Xbox 360</a></li>
+                      </ul>
+                    </li>
+                    <li class="m-site-nav__entry platforms">
+                      <ul class="m-site-nav__platform-list">
+                        <li class="m-site-nav__platform-group"><a href="/mobile">Mobile</a></li>
+                        <li class="m-site-nav__platform"><a href="/ios">iOS</a></li>
+                        <li class="m-site-nav__platform"><a href="/android">Android</a></li>
+                      </ul>
+                    </li>
+                    <li class="m-site-nav__entry platforms">
+                      <ul class="m-site-nav__platform-list">
+                        <li class="m-site-nav__platform-group"><a href="/pc">PC</a></li>
+                        <li class="m-site-nav__platform"><a href="/windows">Windows</a></li>
+                        <li class="m-site-nav__platform"><a href="/mac">Mac</a></li>
+                        <li class="m-site-nav__platform"><a href="/linux">Linux</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            <li class="m-site-nav__item more">
+              <a class="m-site-nav__primary-link" href="#">More</a>
+              <div class="m-site-nav__shelf more">
+                <div class="m-site-nav__sub-menu more">
+                  <ul class="m-site-nav__shelf-entries more">
+                    <li class="m-site-nav__entry more platforms">
+                      <ul class="m-site-nav__more-list">
+                        <li class="m-site-nav__more-header">Platforms</li>
+                        <li class="m-site-nav__more-item"><a href="/nintendo">Nintendo</a></li>
+                        <li class="m-site-nav__more-item"><a href="/playstation">Playstation</a></li>
+                        <li class="m-site-nav__more-item"><a href="/xbox">Xbox</a></li>
+                        <li class="m-site-nav__more-item"><a href="/mobile">Mobile</a></li>
+                        <li class="m-site-nav__more-item"><a href="/pc">PC</a></li>
+                      </ul>
+                    </li>
+                    <li class="m-site-nav__entry more rss">
+                      <ul class="m-site-nav__more-list">
+                        <li class="m-site-nav__more-header">RSS Feeds</li>
+                        <li class="m-site-nav__more-item"><a href="/rss/index.xml">All</a></li>
+                        <li class="m-site-nav__more-item"><a href="/rss/group/news/index.xml">News</a></li>
+                        <li class="m-site-nav__more-item"><a href="/rss/group/reviews/index.xml">Reviews</a></li>
+                        <li class="m-site-nav__more-item"><a href="/rss/group/features/index.xml">Features</a></li>
+                      </ul>
+                    </li>
+                    <li class="m-site-nav__entry more">
+                      <ul class="m-site-nav__more-list">
+                        <li class="m-site-nav__more-item"><a href="/pages/about">Who We Are</a></li>
+                        <li class="m-site-nav__more-item"><a href="http://jobs.voxmedia.com">Jobs</a></li>
+                        <li class="m-site-nav__more-item"><a href='/pages/write-a-feature-article-for-polygon'>Pitch a Story</a></li>
+                        <li class="m-site-nav__more-item"><a href="/pages/contact">Tip Us</a></li>
+                        <li class="m-site-nav__more-item"><a href="/pages/contact">Contact Us</a></li>
+                      </ul>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </li>
+            </ul>
+            <div class="m-site-nav__search-container no-touch" id="nav_search">
+              <form action="/search" method="get" id="live_search_form" class="m-site-nav__search-form">
+                <input name="q" id="nav_search_input" class="m-site-nav__search-input  mousetrap" type="text" placeholder="Search Games & Reviews" autocomplete="off" />
+                <input id="nav_search_submit" type="submit" value="search" class="m-site-nav__search-submit submit" />
+                <div id="nav_search_loader" class="m-site-nav__search-loader loader"></div>
+                <a href="#" id="close_search_results_btn" class="search_results_close">Close</a>
+              </form>
+              <div id="nav_search_results" class="m-site-nav__search-results results">
+              </div>
+            </div>
+
+            <div class="m-site-nav__user-container no-touch">
+      <a href="http://www.polygon.com/login?return_to=http%3A%2F%2Fwww.polygon.com%2F2015%2F10%2F26%2F9553081%2Fhalo-5-guardians-review-xbox-one" class="m-site-nav__login-button" data-chorus-auth="login">Login</a>
+    </div>
+
+
+      </ul>
+      <ul class="m-site-nav__left-side">
+        <li class="m-site-nav__left-side__item">
+          <a class="m-site-nav__left-side__link" href="/news">News</a>
+          <ul class="m-site-nav__left-side__sub-list">
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/report'>Reports</a>
+            </li>
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/culture'>Culture</a>
+            </li>
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/news'>News</a>
+            </li>
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/minimap'>Minimap</a>
+            </li>
+          </ul>
+        </li>
+        <li class="m-site-nav__left-side__item"><a class="m-site-nav__left-side__link" href="/forums">Forums</a></li>
+        <li class="m-site-nav__left-side__item"><a class="m-site-nav__left-side__link" href="/games/reviewed">Reviews</a></li>
+        <li class="m-site-nav__left-side__item"><a class="m-site-nav__left-side__link" href="/opinion">Opinion</a></li>
+        <li class="m-site-nav__left-side__item"><a class="m-site-nav__left-side__link" href="/features">Features</a></li>
+        <li class="m-site-nav__left-side__item"><a class="m-site-nav__left-side__link" href="/videos">Videos</a>
+        <ul class="m-site-nav__left-side__sub-list">
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/videos'>All Videos</a>
+            </li>
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/overview'>Overview</a>
+            </li>
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/human-angle'>Human Angle</a>
+            </li>
+          </ul></li>
+        <li class="m-site-nav__left-side__item"><a class="m-site-nav__left-side__link" href="/">More</a>
+          <ul class="m-site-nav__left-side__sub-list">
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/pages/about'>Who We Are</a>
+            </li>
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='http://jobs.voxmedia.com'>Jobs</a>
+            </li>
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/pages/write-a-feature-article-for-polygon'>Pitch a Story</a>
+            </li>
+            <li class="m-site-nav__left-side__sub-list-item">
+              <a class="m-site-nav__left-side__sub-list-link" href='/pages/contact'>Contact Us</a>
+            </li>
+          </ul>
+        </li>
+      </ul>
+  </div>
+  </nav>
+  <div class="m-user-msg__root">
+  </div>
+</div>
+
+  <div id="polybar_spacer"></div>
+
+  <div id="nav_leaderboard"></div>
+
+  {% if article.image != null %}
+    <div id="feature_cover" class="m-feature__cover cover vox-lazy-load" data-original="{{ article.image }}"></div>
+  {% endif %}
+
+  {% if article.image == null %}
+    <div id="feature_cover" class="m-feature__cover cover vox-lazy-load" data-original=""></div>
+  {% endif %}
+
+<div class="super">
+  <div class="content m-review">
+    <style type="text/css">
+ html{line-height:1.4em;font-family:'Mercury SSm A', 'Mercury SSm B';font-weight:400;font-style:normal;font-size:inherit}body{background-color:#e7e7e2;-webkit-animation-delay:0.1s;-webkit-animation-name:fontfix;-webkit-animation-duration:0.1s;-webkit-animation-iteration-count:1;-webkit-animation-timing-function:linear}@-webkit-keyframes fontfix{from{opacity:1}to{opacity:1}}h1,h2,h3,h4,h5,h6{font-family:"Gotham SSm A","Gotham SSm B",Arial,sans-serif}a{text-decoration:none;color:#ff0052}a:hover{color:#8e2b88}.no-margin-child:first-child,p:first-child{margin-top:0}.no-margin-child:last-child,p:last-child{margin-bottom:0}p{margin:15px 0;font-size:15px;line-height:1.6}ul{list-style:none}textarea,input{outline:none}input{border-radius:0}*{-webkit-font-smoothing:antialiased}*,a:link,a:active,a:hover,a:focus{outline:none;-webkit-tap-highlight-color:rgba(0,0,0,0)}img{max-width:100%}.-font-gotham{font-family:"Gotham SSm A","Gotham SSm B",Arial,sans-serif}.-font-mercury{font-family:"Mercury SSm A","Mercury SSm B",Georgia,serif}.is-hidden{display:none}.-background-cover{background-size:cover}.clearfix{zoom:1}.clearfix:before,.clearfix:after{content:"\0020";display:block;height:0;overflow:hidden}.clearfix:after{clear:both}.hidden{display:block !important;visibility:hidden !important;height:0 !important}.polygon-overlay{position:fixed;top:0;left:0;width:100%;height:100%;background:#000;opacity:0.7;display:none;z-index:214645}body.chorus-modal-loading .m-chorus-modal__wrapper:after{background-image:url("/images/polygon/loader.gif")}.large,.large p,.large div p{font-size:1.05em !important;color:#444}.polygon.review .super .content article .wrapup blockquote{font-weight:bold !important;font-size:2em !important}
+
+</style>
+
+<article id="entry-top">
+  <div class="float_wrapper">
+    
+    <header>
+  <div class="header-container">
+    
+    <h1 data-remote-headline-edit="title" data-remote-admin-entry-id="9317122">{{ article.name }}</h1>
+      <p class="byline">
+        By <em><a href="http://www.polygon.com/users/aegies">Giancarlo Ventura</a></em>
+          <span class="timestamp">on October 26, 2015
+            at 3:01am
+          </span>
+        <span class="m-entry-admin-button " data-remote-admin-entry-type="button" data-remote-admin-entry-id="9317122"></span>
+
+      </p>
+
+  </div>
+</header>
+      <div class="m-share-buttons">
+  <div class="m-share-buttons__inner-wrapper">
+
+    <div class="p-button social facebook">
+      <a href="http://www.facebook.com/share.php?u=http%3A%2F%2Fwww.polygon.com%2F2015%2F10%2F26%2F9553081%2Fhalo-5-guardians-review-xbox-one" data-analytics-social="facebook" data-analytics-placement="top">Share</a>
+    </div>
+
+    <div class="p-button social twitter">
+      <a data-analytics-social="twitter" data-analytics-placement="top" href="https://twitter.com/intent/tweet?text=Halo%205%3A%20Guardians%20review&via=Polygon&url=http%3A%2F%2Fwww.polygon.com%2F2015%2F10%2F26%2F9553081%2Fhalo-5-guardians-review-xbox-one">Tweet</a>
+    </div>
+  </div>
+</div>
+
+    
+<section class="body m-review__body" id="review-body">
+  <p class="m-entry__intro"><i>Halo 5: Guardians </i>has more weights around its neck than really seems fair.</p>
+  <table style="" cellpadding="3" cellspacing="0">
+
+  <tbody><tr>
+  <td>
+  <table style="width:100%; border:0;" cellpadding="0" cellspacing="0">
+
+  <tbody><tr>
+  <td>
+  <div style=""><a href="/wiki/Argos_Rho" title="Argos Rho">Argos Rho</a></div>
+  </td></tr>
+
+
+
+
+
+  <tr>
+  <td>
+  <div style="background:#223; margin-top:3px; padding:2px 8px 0; font-weight:bold; font-size:12px;"><a href="/wiki/Gorgon" title="Gorgon">Gorgon</a></div>
+  </td></tr>
+  <tr>
+  <td style="background:#223; padding:0 8px 2px;">
+  <div style="display:inline;"><a href="/wiki/Wuo" title="Wuo">Wuo</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Vectra" title="Vectra">Vectra</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Camaron" title="Camaron">Camaron</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline; font-weight:bold; font-style:italic;"><a href="/wiki/UNC:_Depot_Sigma-23" title="UNC: Depot Sigma-23">Unidentified Space Facility</a><sup>†</sup></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Sharblu" title="Sharblu">Sharblu</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Slekon" title="Slekon">Slekon</a></div>
+  </td></tr>
+
+  <tr>
+  <td>
+  <div style="background:#223; margin-top:3px; padding:2px 8px 0; font-weight:bold; font-size:12px;"><a href="/wiki/Hydra" title="Hydra">Hydra</a></div>
+  </td></tr>
+  <tr>
+  <td style="background:#223; padding:0 8px 2px;">
+  <div style="display:inline;"><a href="/wiki/Varmalus" title="Varmalus">Varmalus</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline; font-weight:bold; font-style:italic;"><a href="/wiki/Metgos" title="Metgos">Metgos</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Theyar" title="Theyar">Theyar</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Canrum" title="Canrum">Canrum</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Syba" title="Syba">Syba</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><i><a href="/wiki/Mass_relay" title="Mass relay" class="mw-redirect">Mass relay</a><sup>‡</sup></i></div>
+  </td></tr>
+
+  <tr>
+  <td>
+  <div style="background:#223; margin-top:3px; padding:2px 8px 0; font-weight:bold; font-size:12px;"><a href="/wiki/Phoenix" title="Phoenix">Phoenix</a></div>
+  </td></tr>
+  <tr>
+  <td style="background:#223; padding:0 8px 2px;">
+  <div style="display:inline;"><a href="/wiki/Patashi" title="Patashi">Patashi</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;">Asteroid belt</div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Sylsalto" title="Sylsalto">Sylsalto</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Intai%27sei" title="Intai'sei">Intai'sei</a><sup>‡</sup></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline; font-weight:bold; font-style:italic;"><a href="/wiki/Tuntau" title="Tuntau">Tuntau</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline; font-weight:bold; font-style:italic;"><a href="/wiki/Pinnacle_Station_(location)" title="Pinnacle Station (location)">Pinnacle Station</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;">Asteroid belt</div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline;"><a href="/wiki/Vebinok" title="Vebinok">Vebinok</a></div><div style="display:inline; margin:0 13px;">•</div>
+  <div style="display:inline; font-weight:bold; font-style:italic;"><a href="/wiki/Intai%27sei" title="Intai'sei">Intai'sei</a><sup>†</sup></div>
+  </td></tr></tbody></table>
+  <div style="display:block; margin-top: 8px;"><div style="margin:0 20px 0 10px; font-size:xx-small; display:inline;"><sup>†</sup>&nbsp;<a href="/wiki/Mass_Effect" title="Mass Effect">Mass Effect</a></div><div style="margin:0 20px 0 10px; font-size:xx-small; display:inline;"><sup>‡</sup>&nbsp;<a href="/wiki/Mass_Effect_3" title="Mass Effect 3">Mass Effect 3</a></div></div>
+  </td></tr></tbody></table>
+</section>
+        
+  </div>
+</article>
+
+    <div class="l-chunk chunk vox-module m-comments--with-sidebar polygon-comments-with-sidebar">
+  <div class="m-comments--with-sidebar__comments">
+    <div class="m-comments vox-module">
+      <div id="comments" class="comments_wrapper "></div>
+    </div>
+  </div>
+  <div class="m-comments--with-sidebar__sidebar">
+
+<!-- END SNIPPET -->
+
+    <div class="chaser">
+      <div class='chaser'>
+  <div class="from_the_forums">
+    <div class="from_the_forums_header">
+      <h2>Active Discussions</h2>
+    </div>
+    <div class="from_the_forums_wrapper">
+      
+    <div class="thread">
+      <h3>
+        <a href="http://www.polygon.com/forums/off-topic/2015/11/12/9724808/anime-cartoons-comics-plight-vol-3-no-21-yearning-to-plight?utm_source=polygon&utm_medium=recentdiscussions&utm_campaign=hub">
+          Anime, Cartoons, Comics! Plight Vol. 3, no. 21: Yearning to Plight!
+        </a>
+      </h3>
+    </div>
+    <p class="byline">
+      <strong>in <a href="/forums/off-topic">Off-topic</a></strong>
+      <em>by <a href="http://www.polygon.com/users/sum_guy">sum_guy</a></em>
+    </p>
+
+
+    <div class="thread">
+      <h3>
+        <a href="http://www.polygon.com/forums/off-topic/2015/11/25/9797602/polygon-daily-for-november-25-muricas-friday?utm_source=polygon&utm_medium=recentdiscussions&utm_campaign=hub">
+          Polygon Daily for November 25: Murica&#39;s Friday!
+        </a>
+      </h3>
+    </div>
+    <p class="byline">
+      <strong>in <a href="/forums/off-topic">Off-topic</a></strong>
+      <em>by <a href="http://www.polygon.com/users/James%20Elliott">James Elliott</a></em>
+    </p>
+
+
+    <div class="thread">
+      <h3>
+        <a href="http://www.polygon.com/forums/heroes-of-the-storm/2015/11/25/9802600/heroes-of-the-storm-thread-for-lack-of-a-better-title?utm_source=polygon&utm_medium=recentdiscussions&utm_campaign=hub">
+          Heroes of the Storm Player Thread (for lack of a better title)
+        </a>
+      </h3>
+    </div>
+    <p class="byline">
+      <strong>in <a href="/forums/heroes-of-the-storm">Heroes of the Storm</a></strong>
+      <em>by <a href="http://www.polygon.com/users/Sean%20Parker">Sean Parker</a></em>
+    </p>
+
+
+    <div class="thread">
+      <h3>
+        <a href="http://www.polygon.com/forums/polynauts/2015/11/21/9775730/polygon-asks-is-a-multiplayer-only-experience-worth-60?utm_source=polygon&utm_medium=recentdiscussions&utm_campaign=hub">
+          Polygon Asks: Is a multiplayer only experience worth $60?
+        </a>
+      </h3>
+    </div>
+    <p class="byline">
+      <strong>in <a href="/forums/polynauts">Polynauts</a></strong>
+      <em>by <a href="http://www.polygon.com/users/James%20Elliott">James Elliott</a></em>
+    </p>
+
+
+    <div class="thread">
+      <h3>
+        <a href="http://www.polygon.com/forums/destiny/2015/11/24/9791652/polygons-destiny-thread-for-the-week-of-november-24th-independent?utm_source=polygon&utm_medium=recentdiscussions&utm_campaign=hub">
+          Polygon&#39;s Destiny thread for the week of November 24th: Independent George is stuffed
+        </a>
+      </h3>
+    </div>
+    <p class="byline">
+      <strong>in <a href="/forums/destiny">Destiny</a></strong>
+      <em>by <a href="http://www.polygon.com/users/graze81">graze81</a></em>
+    </p>
+
+
+    </div>
+
+    <footer class="from_the_forums_footer">
+      <p>
+        <a href="/forums">View All</a>
+      </p>
+    </footer>
+  </div>
+</div>
+
+    </div>
+  </div>
+</div>
+  </div>
+</div>
+
+
+<div class="super">
+
+<footer id="site-footer" class="m-footer ">
+
+<div class="m-footer__meta">
+  Polygon &bull;
+  <a href="/pages/about">about</a> &bull;
+  <a href="http://jobs.voxmedia.com">Jobs</a> &bull;
+  <a href="/pages/ethics-statement">Ethics statement</a>  <br />
+  <a href="/pages/community-guidelines">Community Guidelines</a> &bull;
+  <a href="http://www.voxmedia.com/terms-of-use">Terms of use</a> &bull;
+  <a href="http://www.voxmedia.com/privacy-policy">Privacy Policy</a> &bull;
+  <a href="/rss/index.xml">RSS</a>
+
+
+  <p>
+    &copy; 2015 <a href="http://www.voxmedia.com/">Vox Media</a> Inc. all rights reserved &bull;
+    Designed & Developed <a href="http://product.voxmedia.com/">in house</a>
+  </p>
+  <p>Partner site of The Verge</p>
+  <p>
+    <span id="status_io" class="m-footer__bottom__status">
+  All Systems Operational
+  <a href="http://status.voxmedia.com" target="_blank">Check out our status page for more details.</a>
+</span>
+
+  </p>
+
+</div>
+
+<div class="m-footer__mobile-meta">
+  <a class="m-footer__mobile-meta__menu" href="#">Top of Page</a>
+  <a class="m-footer__mobile-meta__menu" href="/">Home</a>
+  <span class="m-footer__copyright">
+    &copy; 2015 <a href="http://www.voxmedia.com/">Vox Media</a> Inc. all rights reserved<br>
+    Designed <a href="http://product.voxmedia.com/">in house</a>
+  </span>
+</div>
+
+<a href="http://voxmedia.com/" class="m-footer__vox-logo"></a>
+
+</footer>
+
+</div>
+
+  </div>
+
+<script src="https://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/trianglify/0.4.0/trianglify.min.js"></script>
+<script>
+  var cover_image = $('#feature_cover').data('original');
+  console.log(cover_image);
+  if(cover_image == ""){
+    var h = document.getElementById('feature_cover').clientHeight;
+    var w = document.getElementById('feature_cover').clientWidth;
+    console.log(h,w)
+    var pattern = Trianglify({
+        width: w,
+        height: h
+    });
+    var imigi = pattern.png();
+    console.log(imigi);
+    $('#feature_cover').css('background-image', 'url("' + imigi + '")');
+  }else if(cover_image != ""){
+    $('#feature_cover').css('background-image', 'url("' + cover_image + '")');
+    $('#feature_cover').css('background-size', 'cover');
+    $('#feature_cover').css('background-position', 'center');
+  }    
+</script>
+</body>
+</html>

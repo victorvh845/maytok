@@ -1,0 +1,35 @@
+# Generador de backend
+easy_admin:
+    site_name: 'Maytok Backend'
+    entities:
+        Book:
+            class: AppBundle\Entity\Book
+        Chapter:
+            class: AppBundle\Entity\Chapter
+        Category:
+            class: AppBundle\Entity\Category
+        Article:
+            class: AppBundle\Entity\Article
+            form:
+                fields: ['name', 'slug', 'user', 'image', 'category', 'content']
+        User: 
+            label: 'Usuarios'
+            class: AppBundle\Entity\User
+            list:
+                title: "Lista de usuarios"
+                fields: ['id', 'username', 'email', 'lastLogin', 'enabled', 'locked', 'roles']
+                actions: ['-show']
+            form:
+                fields:
+                    - { property: 'username' }
+                    - { property: 'email', type: 'email' }
+                    - { property: 'plainPassword', type: 'password', label: 'Password', help: 'Escribe al menos 8 caracteres' }
+                    - 'roles'
+                    - { property: 'enabled', type: 'checkbox' }
+                    - { property: 'locked', type: 'checkbox' }
+    assets:
+        js:
+            - 'js/medium-editor.min.js'
+            - 'js/backend-loader.min.js'
+        css:
+            - 'css/medium-editor.min.css'

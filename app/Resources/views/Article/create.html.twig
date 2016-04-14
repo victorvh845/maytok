@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="http://getbootstrap.com/dist/css/bootstrap.min.css">
+	<link rel="stylesheet" href="http://getbootstrap.com/assets/css/ie10-viewport-bug-workaround.css">
+	<link rel="stylesheet" href="http://getbootstrap.com/examples/signin/signin.css">
+</head>
+<body>
+	<div class="container">
+
+        <h2 class="form-signin-heading">Crea un nuevo articulo</h2>
+        <p id="notice"></p>
+        <button class="btn btn-lg btn-primary btn-block" type="submit" id="submit">Enviar</button>
+        <input type="hidden" value="{{ idcategory }}" id="idcategory">
+
+        <label for="inputEmail" class="sr-only">Nombre</label>
+        <input type="text" id="name" class="form-control" placeholder="Nombre" required autofocus>
+
+        <label for="inputEmail" class="sr-only">Slug</label>
+        <input type="text" id="slug" class="form-control" placeholder="slug" required>
+
+        <label for="inputEmail" class="sr-only">imagen</label>
+        <input type="text" id="imagen" class="form-control" placeholder="imagen" required>
+		<hr />             
+
+      <div class="editable" id="content">
+      	Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus, vel. Quod at quo nesciunt earum esse vitae nisi, culpa. Quaerat ipsa pariatur at aperiam, dicta necessitatibus vero. Repellat, ducimus, placeat.
+      </div>
+
+    </div> <!-- /container -->
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="//cdn.jsdelivr.net/medium-editor/latest/js/medium-editor.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/medium-editor/latest/css/medium-editor.min.css" type="text/css" media="screen" charset="utf-8">
+    <script>var editor = new MediumEditor('.editable');</script>
+    <script>
+        jQuery('#submit').click(function(){
+            var name = jQuery('#name').val();
+            var slug = jQuery('#slug').val();
+            var imagen = jQuery('#imagen').val();
+            var editable = jQuery('#content').html();
+            var idcategory = jQuery('input[type=hidden]').val();
+            jQuery.ajax({
+                url: "{{ path('article_create') }}",
+                data: { name: name, slug: slug, imagen: imagen, editable: editable, idcategory: idcategory },
+                type: 'POST',
+                dataType: 'html'
+            }).done(function(){
+                $('#notice').html('¡Genial!. El mensaje ha sido enviado');
+            });
+        }); 
+    </script>
+</body>
+</html>

@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>La oreja de Van Gogh</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        .polygon-div {
+            -webkit-clip-path: polygon(9.38% 59.35%, 13.4% 58.95%, 9.28% 61.08%);
+            transition: .18s cubic-bezier(.7,.3,0,1);
+            background-color: red;
+            height: 2000px;
+            width: 2000px;
+        .polygon-div:hover {
+             -webkit-clip-path: polygon(20% 59.35%, 30% 58.95%, 40% 61.08%);
+         }
+        }
+    </style>
+</head>
+<body>
+<div class="jumbotron">
+    <h1>Demo oido</h1>
+
+    <p>Click en cualquiera de las partes e ingresa el diagnóstico</p>
+</div>
+<div class="row">
+    <div class="col-md-6">
+        <img src="{{ asset('bundles/app/imagemaps/oido.jpg') }}" alt="" usemap="#Map"/>
+        <map name="Map" id="Map">
+            <area id="oreja" alt="" title="" href="#" shape="poly"
+                  coords="34,111,96,115,116,152,116,208,111,246,98,266,95,300,133,408,111,441,106,489,95,506,49,457,34,394,18,309,18,307,8,250,7,205"
+                  onmouseover="this.style.backgroundColor='#00FF00';"/>
+            <area id="conducto" alt="" title="" href="#" shape="poly"
+                  coords="173,323,210,321,255,316,307,308,317,359,278,366,232,371,189,372,178,370"
+                  style="outline:none;"/>
+            <area id="timpano" alt="" title="" href="#" shape="poly" coords="327,308,332,343,338,355,349,352,349,328"
+                  style="outline:none;"/>
+            <area id="eustaquio" alt="" title="" href="#" shape="poly"
+                  coords="415,394,455,394,466,428,480,457,504,487,513,515,447,523" style="outline:none;"/>
+            <area id="caracol" alt="" title="" href="#" shape="poly"
+                  coords="496,369,475,342,455,320,449,290,456,258,480,241,505,235,534,238,551,267,566,303,563,339,542,364,519,372"
+                  style="outline:none;"/>
+        </map>
+    </div>
+
+    <div class="col-md-6">
+        <table class="table table-striped">
+            <thead>
+            <tr>
+                <th>oreja</th>
+                <th>conducto</th>
+                <th>timpano</th>
+                <th>caracol</th>
+                <th>eustaquio</th>
+            </tr>
+            </thead>
+            <tbody>
+            <tr>
+                <td class="oreja"></td>
+                <td class="conducto"></td>
+                <td class="timpano"></td>
+                <td class="caracol"></td>
+                <td class="eustaquio"></td>
+            </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
+<div class="row">
+    <div class="col-md-6"><img id="imagini" src="{{ asset('bundles/app/img/4.jpg') }}" alt=""/></div>
+    <div class="col-md-6">
+        <div class="polygon-div"></div>
+    </div>
+</div>
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+<script>
+    localStorage.setItem("oido", "sano");
+    localStorage.setItem("conducto", "sano");
+    localStorage.setItem("timpano", "sano");
+    localStorage.setItem("caracol", "sano");
+    $('#oreja').click(function (event) {
+        var oreja = prompt('Ingresa diagnostico para oreja');
+        if (oreja != null) {
+            $('.oreja').html(oreja);
+        }
+
+    });
+    $('#conducto').click(function (event) {
+        var conducto = prompt('Ingresa diagnostico para conducto');
+        if (oreja != null) {
+            $('.conducto').html(conducto);
+        }
+    });
+    $('#timpano').click(function (event) {
+        var timpano = prompt('Ingresa diagnostico para timpano');
+        if (timpano != null) {
+            $('.timpano').html(timpano);
+        }
+    });
+    $('#caracol').click(function (event) {
+        var caracol = prompt('Ingresa diagnostico para caracol');
+        if (caracol != null) {
+            $('.caracol').html(caracol);
+        }
+    });
+    $('#eustaquio').click(function (event) {
+        var eustaquio = prompt('Ingresa diagnostico para eustaquio');
+        if (eustaquio != null) {
+            $('.eustaquio').html(eustaquio);
+        }
+    });
+</script>
+</body>
+</html>

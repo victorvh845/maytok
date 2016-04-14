@@ -1,0 +1,235 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/grid-index.min.css') }}">
+{% endblock %}
+
+{% block customheader %}
+    <div id="custom-header" class="site-background"
+         data-image={{ asset('img/feliz_ano_novo_by_aarontyree-d5q0apk.jpg') }} data-opacity="0.80" data-color="181a25">
+        <div id="tagline" class="site-tagline row">
+            <h1>Valonde &amp; NeoParis</h1>
+            <h2>Reimagina por completo la historia de la Humanidad</h2>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <section id="services" data-block="show">
+        <header class="page-header page-header--home">
+            <h2 class="home-title"><span>Los Libros</span></h2>
+            <p class="home-subtitle">Experimenta una nueva forma de lectura interactiva</p>
+        </header>
+        {# BOOK SLIDER#}
+        <div id="animatecovers">
+            {# FIRST SLIDE #}
+            <div class="section-block portfolio--section-block clearfix sectionmaincover neoparis" id="firstslide"
+                 data-image="{{ asset('bundles/app/img/genesis.jpg') }}">
+                <div class="large-6 columns">
+                    <div class="entry-title"><br/><br/><br/>
+                        <h2>NEOPARIS</h2>
+                    </div>
+                    <div class="entry-content">
+                        <p class="hidden-sm hidden-xs">
+                            NeoParis, 2854. En la última ciudad sobre la Tierra, la Humanidad se enfrenta nuevamente a  la extinción. Repleta de desigualdes y abuso de poder, sitiada por la amenazada de una sorda rebelión, todo cambia cuando se realiza un descubrimiento que podría revolucionar para siempre el futuro de la Humanidad... o exterminarla definitivamente.
+                        </p><br/>
+                        <p class="hidden-sm hidden-xs">NeoParis es el primer libro de la serie Maytok. ¿Qué esperas? Únete y cambia el destino del mundo.</p><br>
+                        <a href="{# {{ path('app_genesis_intro') }} #}" class="hidden-sm hidden-xs">
+                            <button class="dakotabutton dakotabutton_secondary">
+                                <i class="fa fa-hourglass-half"></i>
+                                <ul class="countdown">
+                                    <li><span class="days">00</span></li>
+                                    <li class="seperator">d</li>
+                                    <li><span class="hours">00</span></li>
+                                    <li class="seperator">h</li>
+                                    <li><span class="minutes">00</span></li>
+                                    <li class="seperator">m</li>
+                                    <li><span class="seconds">00</span></li>
+                                    <li class="seperator">s</li>
+                                </ul>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="large-6 columns text-center centered book-cover">
+                    <div class="component">
+                        <figure class='book'>
+                            <!-- Front -->
+                            <ul class='hardcover_front'>
+                                <li>
+                                    <img src="{{ asset('img/cover-genesis.jpg') }}" alt="cover génesis" width="100%" height="100%">
+                                </li>
+                                <li></li>
+                            </ul>
+                            <!-- Pages -->
+                            <ul class='page'>
+                                <li></li>
+                                <li>
+                                    <!-- <a class="btn.cover" href="#">Download</a> -->
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <!-- Back -->
+
+                            <ul class='hardcover_back'>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class='book_spine'>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+            {# SECOND SLIDE #}
+            <div class="section-block portfolio--section-block clearfix sectionmaincover valonde" id="secondslide"
+                 data-image="{{ asset('bundles/app/img/radha.jpg') }}">
+                <div class="large-6 columns">
+                    <div class="entry-title"><br/><br/><br/>
+
+                        <h2>VALONDE</h2>
+                    </div>
+                    <div class="entry-content">
+                        <p class="hidden-sm hidden-xs">
+                            Valonde es un mundo salvaje, exótico y cautivador, donde se puede dormir siendo el Rey de Reyes y amanecer degollado a un lado del camino. En ese mundo, Radha es una de las mejores asesinas, entrenada desde su infancia para acabar con sus objetivos con supremacía letal.
+                            Pero pronto descubrirá que el destino le reserva algo más allá de la sangre y la muerte, comenzando un viaje de autodescubrimiento que cambiará todo, desde ella hasta el mundo que la rodea.
+                        </p><br/>
+
+                        <p class="hidden-sm hidden-xs">Radha es el segundo libro de la serie Maytok. ¿Qué esperas?
+                            Únete y cambia el destino del mundo.</p><br>
+
+                        <a href="{# {{ path('app_genesis_intro') }} #}" class="hidden-sm hidden-xs">
+                            <button class="dakotabutton dakotabutton_secondary">
+                                <i class="fa fa-hourglass-half"></i>
+                                <ul class="countdown">
+                                    <li><span class="days">00</span></li>
+                                    <li class="seperator">d</li>
+                                    <li><span class="hours">00</span></li>
+                                    <li class="seperator">h</li>
+                                    <li><span class="minutes">00</span></li>
+                                    <li class="seperator">m</li>
+                                    <li><span class="seconds">00</span></li>
+                                    <li class="seperator">s</li>
+                                </ul>
+                            </button>
+                        </a>
+                    </div>
+                </div>
+                <div class="large-6 columns text-center centered book-cover">
+                    <div class="component">
+                        <figure class='book'>
+                            <!-- Front -->
+                            <ul class='hardcover_front'>
+                                <li>
+                                    <img src="{{ asset('img/cover-radha.jpg') }}" alt="cover radha" width="100%"
+                                         height="100%">
+                                </li>
+                                <li></li>
+                            </ul>
+                            <!-- Pages -->
+                            <ul class='page'>
+                                <li></li>
+                                <li>
+                                    <!-- <a class="btn.cover" href="#">Download</a> -->
+                                </li>
+                                <li></li>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <!-- Back -->
+                            <ul class='hardcover_back'>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                            <ul class='book_spine'>
+                                <li></li>
+                                <li></li>
+                            </ul>
+                        </figure>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- END /.page-header -->
+    </section>
+    <!-- /END #services -->
+
+    <!-- <section class="grid-wrap">
+        <header class="page-header page-header--home">
+            <h2 class="home-title"><span>No te pierdas</span></h2>
+            <p class="home-subtitle">
+                Conoce más sobre la historia
+            </p>
+        </header>
+        <ul class="grid swipe-right" id="grid">
+            <li><a href="#"><img src="{{ asset('img/grid/dragon_swarm_by_lucasgraciano-d5agja2.jpg') }}"
+                alt="personajes">
+            <h3>Personajes</h3></a></li>
+            <li><a href="#"><img src="{{ asset('img/grid/babiru_10_by_babiru-d7b43f2.jpg') }}"
+                alt="Geografía">
+            <h3>Geografía</h3></a></li>
+            <li><a href="#"><img src="{{ asset('img/grid/library_by_vladstudio-d5mfjau.jpg') }}"
+                alt="Blog">
+            <h3>Blog</h3></a></li>
+            <li><a href="#"><img src="{{ asset('img/grid/religion_by_adrhaze-d64jqhb.jpg') }}"
+                alt="Religión">
+            <h3>Religión</h3></a></li>
+            <li><a href="#"><img src="{{ asset('img/grid/witcher_by_reinmar84-d7t5lqn.jpg') }}"
+                alt="Créditos">
+            <h3>Cultura</h3></a></li>
+            <li><a href="#"><img src="{{ asset('img/grid/the_white_crow_by_vladstudio-d5d57jj.jpg') }}"
+                alt="Créditos">
+            <h3>Créditos</h3></a></li>
+        </ul>
+    </section> -->
+
+    <section id="call-to-action" class="portfolio-cta clearfix">
+        <form action="//frbit.us3.list-manage.com/subscribe/post?u=6db41063a5143c028a307ca54&amp;id=fd73c88353" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div class="small-12 medium-6 large-8 columns" style="text-align:center;">
+                <span class="cta-label">SUSCRÍBETE</span>
+                <div class="divider"></div>
+                <p>Obtén las últimas novedades, nuevos capítulos, galerías extendidas y contenido exclusivo directamente en tu cuenta de correo.</p>
+            </div>
+            <div class="small-12 medium-6 large-4 columns">
+                <input type="email" placeholder="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="height:60px;font-size:25px;">
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_6db41063a5143c028a307ca54_fd73c88353" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                class="button" style="background-color:#148F77 !important"></div>
+            </div>
+        </form>
+    </section>
+{% endblock %}
+
+{% block javascripts %}
+    {{ parent() }}
+    <script src="{{ asset('js/grid-index.min.js') }}"></script>
+    <script>
+        /*new GridScrollFx(document.getElementById('grid'), {
+            viewportFactor: 0.4
+        });*/
+        $("#animatecovers").owlCarousel({
+            navigation: false, // Show next and prev buttons
+            slideSpeed: 300,
+            paginationSpeed: 400,
+            singleItem: true,
+            autoPlay: 12000,
+            pagination: false
+        });
+        $('.countdown').downCount({
+            date: '06/06/2016 23:59:59',
+            offset: +10
+        }, function () {
+            console.log('WOOT WOOT, done!');
+        });
+    </script>
+{% endblock %}  

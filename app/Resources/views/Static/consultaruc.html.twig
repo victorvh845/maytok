@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ES">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<input type="text" placeholder="Ingresa el ruc" autofocus="true" id="ruc" />
+	<button id="waka">Consultar el ruc</button>
+	<div id="result">
+		
+	</div>
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.2/jquery.min.js"></script>
+	<script type="text/javascript">
+
+	$(document).on('click', '#waka', function(){
+		console.log('asdasdasd9');
+		$.post( "http://localhost/rainpress/web/app_dev.php/sunat", {ruc: $('#ruc').val()}, function( data ) {
+			data = data[0];
+		    $( "#result" ).append('Empresa: ' + data.razonSocial + '<br>');
+		    $( "#result" ).append('RUC: ' + data.ruc + '<br>');
+		    $( "#result" ).append('estado: ' + data.estado + '<br>');
+		    $( "#result" ).append('condicion domicilio: ' + data.condicionDomicilio + '<br>');
+		    $( "#result" ).append('ubigeo: ' + data.ubigeo + '<br>');
+		});
+	})
+	
+	</script>
+</body>
+</html>

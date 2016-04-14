@@ -1,0 +1,80 @@
+{% extends "base.html.twig" %}
+{% block stylesheets %}
+	{{ parent() }}
+	<link rel="stylesheet" type="text/css" href="{{ asset('css/custom-fonts.css') }}" />
+	<style type="text/css">
+		.blog-content p{
+			font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
+			margin-top: 29px;
+			font-weight: 400;
+			font-style: normal;
+			font-size: 21px;
+			line-height: 1.58;
+			letter-spacing: -.003em;
+			margin-bottom: 0;
+			color: rgba(0,0,0,.8);
+		}
+		.blog-content article{
+			margin-bottom: 50px;
+		}
+	</style>
+{% endblock %}
+{% block customheader %}
+	<div id="custom-header" class="site-background"
+		data-image={{ asset('img/feliz_ano_novo_by_aarontyree-d5q0apk.jpg') }} data-opacity="0.80" data-color="181a25">
+		<div id="tagline" class="site-tagline row">
+			<h1>{{ post.title }}</h1>
+		</div>
+	</div>
+{% endblock %}
+{% block body %}
+	<div class="blog--section-block clearfix">
+		<div id="blog" class="blog-content">
+			<div class="format format-image">
+				<header class="page-header blog-title">
+					<div class="icon-wrapper">
+						<span class="inside">
+							<i class="icon icon-image"></i>
+						</span>
+					</div>
+					<div class="post-meta">
+						<p>
+							Publicado el: <span class="publish-on">{{ post.date|date('d/m/Y') }}</span> | <i class="fa fa-comment"></i> <span class="disqus-comment-count" data-disqus-identifier="{{post.id}}blog"> <!-- Count will be inserted here --> </span>
+						</p>
+					</div>
+				</header>
+				<article>
+					{{ post.body|raw }}
+				</article>
+			</div>
+			
+			<!-- BEGIN comments-wrapper -->
+			<section id="comments-wrapper">
+				<div id="disqus_thread"></div>
+				<script>
+				/**
+				*  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+				*  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables
+				*/
+				
+				var disqus_config = function () {
+				this.page.url = 'http://www.maytok.com';  // Replace PAGE_URL with your page's canonical URL variable
+				this.page.identifier = {{ post.id }} + 'blog'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+											};
+				(function() {  // DON'T EDIT BELOW THIS LINE
+				var d = document, s = d.createElement('script');
+				
+				s.src = '//maytok.disqus.com/embed.js';
+				
+				s.setAttribute('data-timestamp', +new Date());
+				(d.head || d.body).appendChild(s);
+				})();
+				</script>
+				<noscript>Necesitas habilitar Javascript para ver los <a href="https://disqus.com/?ref_noscript" rel="nofollow">comentarios Disqus.</a></noscript>
+			</section>
+			<!-- END comments-wrapper -->
+		</div>
+	</div>
+	<!-- END blog content -->
+	<script id="dsq-count-scr" src="//maytok.disqus.com/count.js" async></script>
+{% endblock %}

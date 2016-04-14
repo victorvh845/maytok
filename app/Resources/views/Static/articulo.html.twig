@@ -1,0 +1,36 @@
+{% extends 'base.html.twig' %}
+{% block stylesheets %}
+	{{parent()}}
+	<link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Alegreya+Sans:100,100italic,300,300italic,regular,italic,500,500italic,700,700italic,800,800italic,900,900italic&amp;v1">
+{% endblock %}
+
+{% block body %}
+	<!--BEGIN custom-header -->
+	<div id="custom-header" class="site-background" data-image="http://p1.pichost.me/640/68/1922960.jpg" data-opacity="0.45" data-color="181a25">		<h1></h1>
+	</div>
+	<!-- END /#custom-header -->
+	
+	<section id="main" class="site-content row" role="main">
+
+		<div class="section-block section-block--samplepage clearfix">
+				
+			<div class="large-12 columns">
+				<div class="entry-title articulo-title">
+					<h2>{{miArticulo.nombre}}</h2>
+					 <div class="divider"></div>
+				</div>
+				<div class="entry-content articulo-content">
+					{{miArticulo.contenido|raw}}
+					<script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+					<!-- TestWIki -->
+					<ins class="adsbygoogle"
+					     style="display:inline-block;width:728px;height:90px"
+					     data-ad-client="ca-pub-3362204954162198"
+					     data-ad-slot="2464391265"></ins>
+					<script>
+					(adsbygoogle = window.adsbygoogle || []).push({});
+					</script>
+				</div>	
+			</div>
+		</div>
+{% endblock %}

@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+
+<!--
+
+ __    __     ______     __  __     ______   ______     __  __    
+/\ "-./  \   /\  __ \   /\ \_\ \   /\__  _\ /\  __ \   /\ \/ /    
+\ \ \-./\ \  \ \  __ \  \ \____ \  \/_/\ \/ \ \ \/\ \  \ \  _"-.  
+ \ \_\ \ \_\  \ \_\ \_\  \/\_____\    \ \_\  \ \_____\  \ \_\ \_\ 
+  \/_/  \/_/   \/_/\/_/   \/_____/     \/_/   \/_____/   \/_/\/_/ 
+                                                                  
+===================================================================
+===================================== Maytok. A Gens Sakya fork ===
+== Looking under the hood? http://github.com/KhanMaytok ===========
+===================================================================
+-->
+
+
+<html class="no-js" lang="es" data-cursor="ec008c">
+<head>  
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width">
+  <meta charset="UTF-8">
+  <meta name="description" content="Web Maytok. Encuentra aquí los libros Valonde, Radha y Titán. Suscríbete para tener las últimas noticias y novedades">
+  <link rel="icon" href="{{ asset('favicon.ico') }}" type="image/x-icon">
+  <link rel="publisher" href="https://plus.google.com/+GiancarloVenturaGranados">
+
+  {# Open graph meta  #}
+  <meta property="og:title" content="Maytok" />
+  <meta property="og:description" content="Web Maytok. Encuentra aquí los libros Valonde, NeoParis y Titán. Suscríbete para tener las últimas noticias y novedades" />
+  <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="Maytok" />
+  <meta property="og:url" content="http://www.maytok.com/" />
+  <meta property="og:image" content="http://i.imgur.com/50dTPQa.jpg" />
+
+  {# ICONS #}
+  <link rel="apple-touch-icon" href="{{ asset('apple-touch-icon.png') }}">
+  <link rel="apple-touch-icon" sizes="57x57" href="{{ asset('apple-touch-icon-57x57.png') }}">
+  <link rel="apple-touch-icon" sizes="114x114" href="{{ asset('apple-touch-icon-114x114.png') }}">
+  <link rel="apple-touch-icon" sizes="72x72" href="{{ asset('apple-touch-icon-72x72.png') }}">
+  <link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
+
+  <title>MAYTOK | Valonde - NeoParis - Titán</title>
+
+  {# Stylesheets #}
+  {% block stylesheets %}
+      <link rel="stylesheet" href="{{ asset('fonts/fonts.css') }}">
+      <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.1/css/font-awesome.min.css">
+      <link rel="stylesheet" href="{{ asset('css/base.min.css') }}">
+  {% endblock %}
+
+  <!-- Javascripts -->
+  {% block headerscripts %}
+    <script type="text/javascript" src="{{ asset('js/base-head.min.js') }}"></script>
+  {% endblock %}
+
+  <!-- Piwik -->
+  <script type="text/javascript">
+    var _paq = _paq || [];
+    _paq.push(['trackPageView']);
+    _paq.push(['enableLinkTracking']);
+    (function() {
+      var u="//cerberus.maytok.com/";
+      _paq.push(['setTrackerUrl', u+'piwik.php']);
+      _paq.push(['setSiteId', 1]);
+      var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+      g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+    })();
+  </script>
+  <noscript><p><img src="//cerberus.maytok.com/piwik.php?idsite=1" style="border:0;" alt="" /></p></noscript>
+  <!-- End Piwik Code -->
+</head>
+
+<body class="home sticky-nav">
+  <!-- BEGIN /#container --> 
+  <section class="container">
+
+  <!-- BEGIN header -->
+  <header id="masthead" class="site-header--fixed site-header">
+
+  <div class="row">
+      <div id="logo" class="site-logo">
+          <a href="{{ path('app_homepage') }}">
+            <img src="{{ asset('img/site-logo.png') }}" alt="Maytok Logo" title="Maytok: a Gens Sakya fork">
+          </a>
+      </div>  
+
+    <!-- INCLUDE NAVBAR -->
+    <div class="navbar"> 
+    <nav class="site-navigation navigation">
+      <ul id="primary" class="primary-menu">
+          <li>
+            <a href="{{ path('app_homepage') }}">Home</a>
+          </li>
+          <li>
+            <a href="{{ path('app_blog') }}">Blog</a>
+          </li>
+          <li>
+            <a href="{{ path('app_wiki') }}">Wiki</a>
+          </li>
+          <li>
+             <a href="{{ path('app_contacto') }}">Contacto</a>
+          </li>
+          <li>
+            {% if is_granted("IS_AUTHENTICATED_REMEMBERED") %}
+                <a href="{{ path('fos_user_security_logout') }}">
+                  {{ 'layout.logout'|trans({}, 'FOSUserBundle') }}
+                </a>
+                <ul class="sub-menu">
+                  <li>
+                    <a href="{{ path('fos_user_profile_show') }}">
+                      {{ app.user.username }}
+                    </a>
+                  </li>
+                </ul>
+            {% else %}
+                <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
+            {% endif %}
+          </li>
+      </ul>      
+          <a href="#" class="nav-toggle icon-menu" aria-hidden="false"></a>
+      </nav>
+    </div>    
+   </div>
+  </header>
+  <!-- END header -->
+    {% block customheader %}
+    {% endblock %}    
+
+  <!-- BEGIN #main --> 
+  <section id="main" class="site-content row" role="main">
+
+    {% block body %}
+    {% endblock %}
+
+    {# BEGIN widgets #}
+    <section id="widgets" class="clearfix widgets">
+      <div class="four large-4 columns">
+        <h3>Enlaces útiles</h3>
+        <div class="blog-entries">
+          <article>
+            <h5>
+              <a target="_blank" href="http://www.amazon.com/b?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&node=1000&site-redirect=&tag=rainpress-20&linkId=TXMVURCXF72ZERPD">Best sellers esta temporada</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=rainpress-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </h5>
+          </article>
+          <article>
+            <h5>
+              <a target="_blank" href="http://www.amazon.com/b?_encoding=UTF8&camp=1789&creative=9325&linkCode=ur2&node=25&site-redirect=&tag=rainpress-20&linkId=327SLIZOAWANK6VM">Ciencia ficción y fantasía</a><img src="http://ir-na.amazon-adsystem.com/e/ir?t=rainpress-20&l=ur2&o=1" width="1" height="1" border="0" alt="" style="border:none !important; margin:0px !important;" />
+            </h5>
+          </article>
+        </div>
+      </div>
+      <div class="four large-4 columns">
+        <h3>Nuestro blog</h3>
+        <div class="blog-entries" id="blogParser"><article><h5>Cargando...</h5></article></div>
+      </div>
+      <div class="four large-4 columns">
+        <h3>Acerca de Maytok</h3>
+        <p>
+          Serie planeada de 13 libros interactivos. Por ahora sólo disponibles los dos primeros. 
+        </p>
+        <div class="social">
+          <a title="Facebook" class="facebook" href="https://www.facebook.com/GensSakya"><i class="fa fa-facebook"></i></a>
+          <a title="Twitter" class="twitter" href="//twitter.com/SakyaStelios"><i class="fa fa-twitter"></i></a>
+          <a title="Google Plus" class="google-plus" href="//google.com/+giancarloventuragranados"><i class="fa fa-google-plus"></i></a>
+          <a title="RSS" class="rss" href="http://blog.rainpress.me/feed.xml"><i class="fa fa-rss"></i></a>
+        </div>
+      </div>
+    </section>
+    <footer class="site-footer">
+        <div class="copyright">
+           Todos los derechos reservados &copy; 2014 - 2016 | 
+           <a href="#">Información legal</a>
+        </div>
+        <a title="Scroll To Top" href="#top" id="scroll-top" class="scroll-top">
+          <span>Top</span>
+          <i class="icon-circleup"></i>
+        </a>
+    </footer>
+  </section>
+</section>
+
+    {% block javascripts %}
+        <script type="text/javascript" src="{{ asset('js/base.min.js') }}"></script>
+    {% endblock %}
+  </body>
+</html>

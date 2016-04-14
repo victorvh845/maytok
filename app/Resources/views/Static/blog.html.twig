@@ -1,0 +1,224 @@
+{% extends "base.html.twig" %}
+
+{% block stylesheets %}
+    {{ parent() }}
+    <link rel="stylesheet" href="{{ asset('css/grid-index.min.css') }}">
+    <style type="text/css">
+        #container-posts {
+            color: rgb(102, 102, 102);
+            height: auto;
+            width: 100%;
+            position: relative;
+            text-decoration: none solid rgb(102, 102, 102);
+            margin: 0px;
+            padding-left: 100px;
+            padding-right: 100px;
+            margin-bottom: 50px;
+        }/*#container-posts*/
+
+        #posts {
+            color: rgb(102, 102, 102);
+            max-width: 100%;
+            position: relative;
+            text-decoration: none solid rgb(102, 102, 102);
+            width: 100%;
+            height: auto;
+        }/*#posts*/
+
+        #link-post {
+            color: rgb(88, 178, 61);
+            display: block;
+            text-align: left;
+            text-decoration: none solid rgb(88, 178, 61);
+            width: 100%;
+            list-style: none outside none;
+            transition: color 0.3s ease-out 0s;
+        }/*#link-post, #A_15, #A_24, #A_33, #A_42, #A_51, #link-post0, #link-post9*/
+
+        #post-dateglobal {
+            color: rgb(88, 178, 61);
+            display: block;
+            float: left;
+            text-align: left;
+            border: 0px none rgb(88, 178, 61);
+            margin: 0px 20px 0px 0px;
+            transition: color 0.3s ease-out 0s;
+        }/*#post-dateglobal, #SPAN_16, #SPAN_25, #SPAN_34, #SPAN_43, #SPAN_52, #SPAN_61, #post-dateglobal0*/
+
+        #post-daymonth {
+            color: rgb(88, 178, 61);
+            display: block;
+            height: 19px;
+            text-align: right;
+            text-decoration: none solid rgb(88, 178, 61);
+            text-transform: uppercase;
+            width: 75px;
+            perspective-origin: 37.5px 9.5px;
+            transform-origin: 37.5px 9.5px;
+            font: normal normal bold normal 19px / 19px 'montserratregular';
+            list-style: none outside none;
+            outline: rgb(88, 178, 61) none 0px;
+            transition: color 0.3s ease-out 0s;
+        }/*#post-daymonth, #SPAN_17, #SPAN_26, #SPAN_35, #SPAN_44, #SPAN_53, #SPAN_62, #post-dateglobal1*/
+
+        #post-year {
+            color: rgb(102, 102, 102);
+            display: block;
+            text-align: right;
+            text-decoration: none solid rgb(102, 102, 102);
+            width: 75px;
+            perspective-origin: 37.5px 6.5px;
+            transform-origin: 37.5px 6.5px;
+            border: 0px none rgb(102, 102, 102);
+            font: normal normal bold normal 13px / 13px 'montserratregular';
+            list-style: none outside none;
+            outline: rgb(102, 102, 102) none 0px;
+            transition: color 0.3s ease-out 0s;
+        }/*#post-year, #SPAN_18, #SPAN_27, #SPAN_36, #SPAN_45, #SPAN_54, #SPAN_63, #post-dateglobal2*/
+
+        #post-titletags {
+            color: rgb(88, 178, 61);
+            display: block;
+            float: left;
+            height: 45px;
+            text-align: left;
+            text-decoration: none solid rgb(88, 178, 61);
+            width: 385.25px;
+            perspective-origin: 192.625px 22.5px;
+            transform-origin: 192.625px 22.5px;
+            border: 0px none rgb(88, 178, 61);
+            font: normal normal normal normal 20px / 22px Helvetica, Arial, sans-serif;
+            list-style: none outside none;
+            outline: rgb(88, 178, 61) none 0px;
+            transition: color 0.3s ease-out 0s;
+        }/*#post-titletags, #SPAN_19, #SPAN_28, #SPAN_37, #SPAN_46, #SPAN_55, #SPAN_64, #post-dateglobal3*/
+
+        #post-title {
+            color: rgb(102, 102, 102);
+            display: block;
+            text-align: left;
+            text-decoration: none solid rgb(102, 102, 102);
+            width: 385.25px;
+            perspective-origin: 192.625px 13.5px;
+            transform-origin: 192.625px 13.5px;
+            border: 0px none rgb(102, 102, 102);
+            font: normal normal normal normal 25px / 27.5px 'montserratregular', Arial, sans-serif;
+            list-style: none outside none;
+            margin: 0px 0px 4px;
+            outline: rgb(102, 102, 102) none 0px;
+            transition: color 0.3s ease-out 0s;
+        }/*#post-title, #SPAN_20, #SPAN_29, #SPAN_38, #SPAN_47, #SPAN_56, #SPAN_65, #post-dateglobal4*/
+
+        #post-tags {
+            color: rgb(122, 195, 195);
+            display: block;
+            text-align: left;
+            text-decoration: none solid rgb(122, 195, 195);
+            width: 385.25px;
+            perspective-origin: 192.625px 7px;
+            transform-origin: 192.625px 7px;
+            border: 0px none rgb(122, 195, 195);
+            font: normal normal normal normal 13px / 14.3px 'montserratregular';
+            list-style: none outside none;
+            outline: rgb(122, 195, 195) none 0px;
+            transition: color 0.3s ease-out 0s;
+        }/*#post-tags, #SPAN_21, #SPAN_30, #SPAN_39, #SPAN_48, #SPAN_57, #SPAN_66, #post-dateglobal5*/
+
+        #post-relleno {
+            clear: both;
+            color: rgb(88, 178, 61);
+            display: block;
+            text-align: left;
+            text-decoration: none solid rgb(88, 178, 61);
+            width: 550.375px;
+            perspective-origin: 275.188px 0px;
+            transform-origin: 275.188px 0px;
+            border: 0px none rgb(88, 178, 61);
+            font: normal normal normal normal 20px / 22px Helvetica, Arial, sans-serif;
+            list-style: none outside none;
+            outline: rgb(88, 178, 61) none 0px;
+            transition: color 0.3s ease-out 0s;
+        }/*#post-relleno, #SPAN_22, #SPAN_40, #SPAN_58, #post-dateglobal6*/
+
+        .item-post{
+            margin-bottom: 35px;
+            height: auto;
+        }
+        @media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+            #container-posts{
+                padding-right: 25px;
+                padding-left: 25px;
+            }
+        }
+    </style>
+{% endblock %}
+
+{% block customheader %}
+    <div id="custom-header" class="site-background"
+         data-image={{ asset('img/feliz_ano_novo_by_aarontyree-d5q0apk.jpg') }} data-opacity="0.80" data-color="181a25">
+        <div id="tagline" class="site-tagline row">
+            <h1>oooooooooooz!</h1>
+        </div>
+    </div>
+{% endblock %}
+
+{% block body %}
+    <section id="services" data-block="show">
+        <header class="page-header page-header--home">
+            <h2 class="home-title"><span>En construcción</span></h2>
+            <p class="home-subtitle">Date un paseo... Que sea largo</p>
+        </header>
+        <div id="container-posts">
+            <div id="posts">
+                <div class="row">
+                    {% for post in posts.posts %}
+                        <div class="large-6 columns item-post">
+                            <a href="{{ path('app_blog_post', {'id': post.id, 'slug': post.slug}) }}" id="link-post">
+                                <span id="post-dateglobal">
+                                    <span id="post-daymonth">{{ post.date|date("d/M") }}</span>
+                                    <span id="post-year">{{ post.date|date("Y") }}</span>
+                                </span>
+                                <span id="post-titletags">
+                                    <span id="post-title">
+                                        {% if post.title == "" %}
+                                            Título misterioso
+                                        {% else %}
+                                            {{ post.title|easyadmin_truncate(50) }}
+                                        {% endif %}
+                                    </span>
+                                    <span id="post-tags">
+                                        {% for tag in post.tags %}
+                                            #{{tag}}
+                                        {% endfor %}
+                                    </span>
+                                </span>
+                                <span id="post-relleno"></span>
+                            </a>
+                        </div>
+                    {% endfor %}                    
+                </div>
+            </div>
+        </div>       
+    </section>
+
+    <section id="call-to-action" class="portfolio-cta clearfix">
+        <form action="//frbit.us3.list-manage.com/subscribe/post?u=6db41063a5143c028a307ca54&amp;id=fd73c88353" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+            <div class="small-12 medium-6 large-8 columns" style="text-align:center;">
+                <span class="cta-label">SUSCRÍBETE</span>
+                <div class="divider"></div>
+                <p>Obtén las últimas novedades, nuevos capítulos, galerías extendidas y contenido exclusivo directamente en tu cuenta de correo.</p>
+            </div>
+            <div class="small-12 medium-6 large-4 columns">
+                <input type="email" placeholder="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" style="height:60px;font-size:25px;">
+                <div id="mce-responses" class="clear">
+                    <div class="response" id="mce-error-response" style="display:none"></div>
+                    <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_6db41063a5143c028a307ca54_fd73c88353" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Subscribe" name="subscribe" id="mc-embedded-subscribe"
+                class="button" style="background-color:#148F77 !important"></div>
+            </div>
+        </form>
+    </section>
+{% endblock %}
