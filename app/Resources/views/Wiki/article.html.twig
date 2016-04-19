@@ -8,9 +8,9 @@
 		<meta name="description" content="{{ article.name }} " />
 		<meta name="author" content="Giancarlo Ventura" />
 		<link rel="shortcut icon" type="image/x-icon" href="{{ asset('favicon.ico') }}">
-		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/reader/css/normalize.css') }}" />
-		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/reader/css/demo.css') }}" />
-		<link rel="stylesheet" type="text/css" href="{{ asset('bundles/app/reader/css/component.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('reader/css/normalize.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('reader/css/demo.css') }}" />
+		<link rel="stylesheet" type="text/css" href="{{ asset('reader/css/component.css') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/custom-fonts.css') }}" />
 		<link rel="stylesheet" type="text/css" href="{{ asset('css/medium-editor.min.css') }}" />
 		<!--[if IE]>
@@ -20,6 +20,11 @@
 		.title h1{
 			text-shadow: 4px 4px rgba(0,0,0,.3);
 		}
+
+		.container.intro-effect-sliced.modify .title h1{
+			text-shadow: none;
+		}
+
 		#textread{
 			color: #444;
 		}
@@ -73,7 +78,7 @@
 				</div>
 			</article>
 			</div><!-- /container -->
-			<script src="{{ asset('bundles/app/reader/js/classie.js') }}"></script>
+			<script src="{{ asset('reader/js/classie.js') }}"></script>
 			<script src="{{ asset('js/backend-loader.min.js') }}"></script>
 			<script>
 				(function() {

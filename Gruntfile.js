@@ -12,6 +12,14 @@ module.exports = function(grunt) {
                     dest: 'web/fonts/'
                 }]
             },
+            reader_bundle: {
+                files: [{
+                    cwd: 'app/Resources/assets/reader/',
+                    expand: true,
+                    src: '**',
+                    dest: 'web/reader/'
+                }]
+            },
             medium_fonts: {
                 files: [{
                     cwd: 'app/Resources/assets/css/',
