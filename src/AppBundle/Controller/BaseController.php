@@ -144,18 +144,18 @@ class BaseController extends Controller
         $url = "https://api.imgur.com/3/image.json";
         $client_id = $this->container->getParameter('imgur_id');
         $image = file_get_contents($uploadDir . "/" . $fileName);
-        $client = new Guzzle();
-        $apiRequest = $client->request('POST', $url, [
-                'headers' => ['Authorization' => 'Client-ID ' . $client_id],
-                'form_params' => ['image' => base64_encode($image)],
-                'timeout' => 60,
-                'verify' => false
-        ]);
         
-        $body = $apiRequest->getBody();
-        $stringBody = (string) $body;
-        $imageUploaded = json_decode($stringBody);
+        $ch = curl_init();
+        curl_setopt($ch, CURLOPT_URL, $url);
+        curl_setopt($ch, CURLOPT_POST, TRUE);
+        curl_setopt($ch, CURLOPT_RETURNTRANSFER, TRUE);
+        curl_setopt($ch, CURLOPT_HTTPHEADER, array( 'Authorization: Client-ID ' . $client_id ));
+        curl_setopt($ch, CURLOPT_POSTFIELDS, array( 'image' => base64_encode($image) ));
+        
+        $imageUploaded = curl_exec($ch);
 
+        curl_close($ch);
+        
         $response = new JsonResponse();
         $response->setData(array(
             'files' => array(
