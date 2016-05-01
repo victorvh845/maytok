@@ -24,7 +24,7 @@ class BaseController extends Controller
     {
         $client = new Tumblr('hMf8ICpDo2klxkEgmNRgyAumRW87Mv6PxQ58pMiiuTo1CFj1vV');
         $posts = $client->getBlogPosts('khanmaytok.tumblr.com', array(
-            'limit' => self::LIMIT_POST, 'type' => 'text', 'tags' => 'maytok')
+            'limit' => self::LIMIT_POST, 'tag' => 'maytok')
         );
 
         return $this->render('Static/blog.html.twig', array('posts' => $posts));
@@ -39,7 +39,7 @@ class BaseController extends Controller
         $client = new Tumblr('hMf8ICpDo2klxkEgmNRgyAumRW87Mv6PxQ58pMiiuTo1CFj1vV');
         $offset = ($number - 1) * self::LIMIT_POST;
         $posts = $client->getBlogPosts('khanmaytok.tumblr.com', array(
-            'offset' => $offset, 'limit' => self::LIMIT_POST, 'type' => 'text', 'tags' => 'maytok')
+            'offset' => $offset, 'limit' => self::LIMIT_POST, 'tag' => 'maytok')
         );
 
         return $this->render('Static/blog.html.twig', array('posts' => $posts));
@@ -130,7 +130,7 @@ class BaseController extends Controller
     }
 
     /**
-     * @Route("/upload-image", name="upload_image")
+     * @Route("/upload-image/", name="upload_image")
      * @Method("POST")
      * @Security("has_role('ROLE_ADMIN')")
      */
