@@ -155,16 +155,18 @@ class BaseController extends Controller
         $imageUploaded = curl_exec($ch);
 
         curl_close($ch);
+
+        $imageUploaded = json_decode($imageUploaded);
         
         $response = new JsonResponse();
         $response->setData(array(
             'files' => array(
                 '0' => array(
-                    'name' => $imageUploaded['data']['id'],
-                    'size' => $imageUploaded['data']['size'],
-                    'type' => $imageUploaded['data']['type'],
-                    'name' => $imageUploaded['data']['id'],
-                    'url' => $imageUploaded['data']['link']
+                    'name' => $imageUploaded->data->id,
+                    'size' => $imageUploaded->data->size,
+                    'type' => $imageUploaded->data->type,
+                    'name' => $imageUploaded->data->id,
+                    'url' => $imageUploaded->data->link
                     )
                 )
         ));
