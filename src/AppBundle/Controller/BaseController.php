@@ -130,7 +130,7 @@ class BaseController extends Controller
     }
 
     /**
-     * @Route("/upload-image/", name="upload_image")
+     * @Route("/upload-image", name="upload_image")
      * @Method("POST")
      * @Security("has_role('ROLE_ADMIN')")
      */
