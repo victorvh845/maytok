@@ -160,11 +160,11 @@ class BaseController extends Controller
         $response->setData(array(
             'files' => array(
                 '0' => array(
-                    'name' => $imageUploaded->data->id,
-                    'size' => $imageUploaded->data->size,
-                    'type' => $imageUploaded->data->type,
-                    'name' => $imageUploaded->data->id,
-                    'url' => $imageUploaded->data->link
+                    'name' => $imageUploaded['data']['id'],
+                    'size' => $imageUploaded['data']['size'],
+                    'type' => $imageUploaded['data']['type'],
+                    'name' => $imageUploaded['data']['id'],
+                    'url' => $imageUploaded['data']['link']
                     )
                 )
         ));

@@ -18,7 +18,7 @@ if (document.getElementById('article_content') !== null) {
             addons:{
                 images: {
                     fileUploadOptions: {
-                        url: '/upload-image',
+                        url: location.origin + '/upload-image',
                         acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
                     }
                 }
@@ -36,7 +36,7 @@ if (document.getElementById('chapter_content') !== null) {
             addons:{
                 images: {
                     fileUploadOptions: {
-                        url: '/upload-image',
+                        url: location.origin + '/upload-image',
                         acceptFileTypes: /(\.|\/)(gif|jpe?g|png)$/i
                     }
                 }
