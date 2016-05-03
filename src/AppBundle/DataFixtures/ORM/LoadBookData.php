@@ -10,7 +10,7 @@ class LoadBookData implements FixtureInterface
 {
     public function load(ObjectManager $manager)
     {
-        for ($i = 1; $i <= 20; ++$i) {
+        for ($i = 1; $i <= 100; ++$i) {
             $book = new Book();
             $book->setTitle($this->getNombre());
             $book->setAuthor($this->getNombre());

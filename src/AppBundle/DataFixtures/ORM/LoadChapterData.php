@@ -29,7 +29,7 @@ class LoadChapterData extends AbstractFixture implements OrderedFixtureInterface
         $books = $manager->getRepository('AppBundle:Book')->findAll();
 
         foreach ($books as $book) {
-            for ($i = 1; $i <= 20; ++$i) {
+            for ($i = 1; $i <= 10; ++$i) {
             $chapter = new Chapter();
             $chapter->setTitle($this->getNombre());
             $chapter->setNumber($i);
