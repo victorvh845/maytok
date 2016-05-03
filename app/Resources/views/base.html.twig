@@ -107,6 +107,11 @@
                       {{ app.user.username }}
                     </a>
                   </li>
+                  <li>
+                    <a href="{{ path('easy_admin_bundle') }}">
+                      Dashboard
+                    </a>
+                  </li>
                 </ul>
             {% else %}
                 <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
