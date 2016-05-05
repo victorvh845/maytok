@@ -2807,7 +2807,7 @@ myJsonpCallback = function(data)
 
 $.ajax({
     type: "GET",
-    url : "https://api.tumblr.com/v2/blog/khanmaytok.tumblr.com/posts/text?limit=2&tags=maytok&api_key=fuiKNFp9vQFvjLNvx4sUwti4Yb5yGutBN4Xh10LXZhhRKjWlV4",
+    url : "https://api.tumblr.com/v2/blog/khanmaytok.tumblr.com/posts/text?limit=2&tag=maytok&api_key=fuiKNFp9vQFvjLNvx4sUwti4Yb5yGutBN4Xh10LXZhhRKjWlV4",
     dataType: "jsonp",
     data: {
         jsonp : "myJsonpCallback"
