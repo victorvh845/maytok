@@ -484,6 +484,10 @@ input.search:focus{
     outline: 0;
 }
 
+.page-header.blog-title b{
+    font-weight: bolder;
+}
+
 
 /*.small-profile-picture {
     display: inline-block;
