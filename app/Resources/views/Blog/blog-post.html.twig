@@ -3,7 +3,7 @@
 	{{ parent() }}
 	<link rel="stylesheet" type="text/css" href="{{ asset('css/custom-fonts.css') }}" />
 	<style type="text/css">
-		.blog-content p{
+		.blog-content p, .blog-content ul li{
 			font-family: medium-content-serif-font,Georgia,Cambria,"Times New Roman",Times,serif;
 			margin-top: 29px;
 			font-weight: 400;
@@ -14,6 +14,15 @@
 			margin-bottom: 0;
 			color: rgba(0,0,0,.8);
 		}
+
+		.blog-content i{
+			font-style: italic;
+		}
+
+		.blog-content b{
+			font-weight: bolder;
+		}
+
 		.blog-content article{
 			margin-bottom: 50px;
 		}
@@ -58,8 +67,8 @@
 				*/
 				
 				var disqus_config = function () {
-				this.page.url = 'http://www.maytok.com';  // Replace PAGE_URL with your page's canonical URL variable
-				this.page.identifier = {{ post.id }} + 'blog'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+				this.page.url = 'https://www.maytok.com';  // Replace PAGE_URL with your page's canonical URL variable
+				//this.page.identifier = {{ post.id }} + 'blog'; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
 											};
 				(function() {  // DON'T EDIT BELOW THIS LINE
 				var d = document, s = d.createElement('script');
