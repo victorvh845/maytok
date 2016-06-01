@@ -27,3 +27,10 @@ app_credits:
     defaults: 
         _controller: FrameworkBundle:Template:template 
         template:    'Static/credits.html.twig'
+
+app_atlas:
+    path: /atlas/
+    defaults: 
+        _controller: FrameworkBundle:Template:template 
+        template:    'Static/atlas.html.twig'
+
