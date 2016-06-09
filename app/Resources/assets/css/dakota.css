@@ -488,7 +488,9 @@ input.search:focus{
     font-weight: bolder;
 }
 
-
+.tmblr-full{
+    text-align: center;
+}
 /*.small-profile-picture {
     display: inline-block;
     vertical-align: middle;
