@@ -390,43 +390,6 @@ ul.countdown li.seperator {
     margin-left: -7px;
 }
 
-.broke-line {
-  background: #41ade5 !important;
-  position: relative !important;
-  z-index: 1 !important;
-}
-
-.broke-line:before, .broke-line:after {
-  background: inherit !important;
-  content: '' !important;
-  display: block !important;
-  height: 50% !important;
-  left: 0 !important;
-  position: absolute !important;
-  right: 0 !important;
-  z-index: -1 !important;
-}
-
-.broke-line:before {
-  top: 0 !important;
-  -webkit-transform: skewY(1.5deg) !important;
-      -ms-transform: skewY(1.5deg) !important;
-          transform: skewY(1.5deg) !important;
-  -webkit-transform-origin: 100% 0 !important;
-      -ms-transform-origin: 100% 0 !important;
-          transform-origin: 100% 0 !important;
-}
-
-.broke-line:after {
-  bottom: 0 !important;
-  -webkit-transform: skewY(-1.5deg) !important;
-      -ms-transform: skewY(-1.5deg) !important;
-          transform: skewY(-1.5deg) !important;
-  -webkit-transform-origin: 100% !important;
-      -ms-transform-origin: 100% !important;
-          transform-origin: 100% !important;
-}
-
 .entry-title h2 {
     font-family: 'montserratregular', sans-serif;
     color: #fbbf58;
@@ -506,3 +469,6 @@ input.search:focus{
     box-sizing: content-box;
 }
 */
+figcaption{
+    color: #444;
+}
