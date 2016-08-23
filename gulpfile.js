@@ -66,7 +66,7 @@ var assets = {
 gulp.task('copyAssets', function() {
     gulp.src(dir.assets + 'fonts/**/*.*').pipe(gulp.dest(dir.prod + 'fonts'));
     gulp.src(dir.assets + 'reader/**/*.*').pipe(gulp.dest(dir.prod + 'reader'));
-    gulp.src(dir.assets + 'css/custom-fonts.css.*').pipe(gulp.dest(dir.prod + 'css'));
+    gulp.src(dir.assets + 'css/custom-fonts.css').pipe(gulp.dest(dir.prod + 'css'));
     //Minyfing images
     gulp.src(dir.assets + 'img/**/*.*')
         .pipe(imagemin())
