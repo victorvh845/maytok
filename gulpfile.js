@@ -83,8 +83,7 @@ gulp.task('build-js', function() {
 
     gulp.src(assets.base_js)
         .pipe(concat('base.min.js'))
-    //only uglify if gulp is ran with '--type production'
-    .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
+        .pipe(gutil.env.type === 'production' ? uglify() : gutil.noop())
         .pipe(gulp.dest(dir.prod + 'js'));
 
     gulp.src(assets.grid_index_js)
@@ -109,12 +108,12 @@ gulp.task('build-css', function() {
         .pipe(cssmin())
         .pipe(gulp.dest(dir.prod + 'css'));
 
-        gulp.src(assets.grid_index_css)
+    gulp.src(assets.grid_index_css)
         .pipe(concat('grid-index.min.css'))
         .pipe(cssmin())
         .pipe(gulp.dest(dir.prod + 'css'));
 
-        gulp.src(assets.medium_editor_css)
+    gulp.src(assets.medium_editor_css)
         .pipe(concat('medium-editor.min.css'))
         .pipe(cssmin())
         .pipe(gulp.dest(dir.prod + 'css'));

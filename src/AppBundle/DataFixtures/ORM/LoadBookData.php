@@ -17,7 +17,7 @@ class LoadBookData implements FixtureInterface
             $book->setEdition(1);
             $book->setLanguage('ES');
             $book->setPublicationDate(new \DateTime('2015-12-18'));
-            $book->setCover('http://img11.deviantart.net/d98f/i/2015/350/7/f/20151216_by_dtjun-d9kbw3f.jpg');
+            $book->setCover('http://i.imgur.com/fNfZgGS.jpg');
             $book->setSlug('book-'.$i);
             $manager->persist($book);
             $manager->flush();
