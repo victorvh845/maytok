@@ -27,7 +27,7 @@ class ApiController extends Controller
     {
         $em = $this->getDoctrine()->getManager();
         $query = $em->createQuery(
-            'SELECT b.title, b.cover, COUNT(b.id) as chapters
+            'SELECT b.title, b.cover, b.id, COUNT(b.id) as chapters
             FROM AppBundle:Book b LEFT JOIN AppBundle:Chapter c WITH b.id = c.book
             GROUP BY b.id'
         );
