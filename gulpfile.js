@@ -119,6 +119,6 @@ gulp.task('build-css', function() {
         .pipe(gulp.dest(dir.prod + 'css'));
 });
 
-gulp.task('default', ['copyAssets', 'build-js'], function() {
+gulp.task('default', ['copyAssets', 'build-js', 'build-css'], function() {
     return gutil.log('Gulp is running!')
 });
