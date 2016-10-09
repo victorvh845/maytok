@@ -251,4 +251,47 @@ class BaseController extends Controller
         $response = new JsonResponse();
         return $response;
     }
+
+    /**
+     * @Route("/stelios/draft", name="app_stelios")
+     * @Method("GET")
+     * @return Response
+     */
+    public function draftAction()
+    {
+        $user = $this->getUser();
+        dump($user);
+        //Get the user draft content
+        $draft = $this->getDoctrine()
+            ->getRepository('AppBundle:Draft')
+            ->findOneBy(array('user' => $user));
+        dump($draft);
+
+        $content = $draft->getContent();
+
+        return $this->render('Writer/notepad.html.twig', array('content' => $content));
+    }
+
+    /**
+     * @Route("/stelios/draft/write", name="write_draft")
+     * @Method("POST")
+     * @return Response
+     */
+    public function writeDraftAction(Request $request)
+    {
+        $user = $this->getUser();
+        $content = $request->request->get('content', 'default content');
+        //Get the user draft content
+        $draft = $this->getDoctrine()
+            ->getRepository('AppBundle:Draft')
+            ->findOneBy(array('user' => $user));
+        
+        $draft->setContent($content);
+        $em = $this->getDoctrine()->getManager();
+        $em->persist($draft);
+        $em->flush();
+
+        $response = new JsonResponse();
+        return $response;
+    }
 }

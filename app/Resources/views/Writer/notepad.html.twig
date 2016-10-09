@@ -10,8 +10,8 @@
         
 		<!-- CSS -->
 		<link href="//fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic" rel="stylesheet" type="text/css">
-		<link href="css/style.css" rel="stylesheet">
-		<link href="css/fonts.css" rel="stylesheet">
+		<link href="http://static.maytok.com/zenpen/css/style.css" rel="stylesheet">
+		<link href="http://static.maytok.com/zenpen/css/fonts.css" rel="stylesheet">
 
     </head>
 
@@ -78,6 +78,9 @@
 					<button class="save useicons" title="Save Text">
 						&#xe003;
 					</button>
+					<button class="useicons" id="save-to-base" title="Guardar en la base">
+						&#xe003;
+					</button>
 				</div>
 
 				<div class="bottom">
@@ -95,24 +98,44 @@
 		<section>
 			
 			<header contenteditable="true" class="header"></header>
-			<article contenteditable="true" class="content"></article>
+			<article contenteditable="true" class="content" id="sk-content">
+				{{ content }}
+			</article>
 
 		</section>
 
 		<!-- LIBS -->
-		<script src="js/libs/FileSaver.min.js"></script>
-		<script src="js/libs/Blob.min.js"></script>
-		<script src="js/libs/screenfull.min.js"></script>
+		<script src="http://static.maytok.com/zenpen/js/libs/FileSaver.min.js"></script>
+		<script src="http://static.maytok.com/zenpen/js/libs/Blob.min.js"></script>
+		<script src="http://static.maytok.com/zenpen/js/libs/screenfull.min.js"></script>
 		
 		<!-- JS -->
-		<script src="js/default.js"></script>
-		<script src="js/utils.js"></script>
-		<script src="js/editor.js"></script>
-		<script src="js/ui.js"></script>
+		<script src="http://static.maytok.com/zenpen/js/default.js"></script>
+		<script src="http://static.maytok.com/zenpen/js/utils.js"></script>
+		<script src="http://static.maytok.com/zenpen/js/editor.js"></script>
+		<script src="http://static.maytok.com/zenpen/js/ui.js"></script>
 		<script type="text/javascript">
 	        // Initiate ZenPen
 	        ZenPen.editor.init();
 	    	ZenPen.ui.init();
+	    	document.getElementById('save-to-base').addEventListener("click", 
+	    		function(){
+	    			var content = document.getElementById('sk-content').innerHTML;
+	    			var http = new XMLHttpRequest();
+	    			var url = "/app_dev.php/stelios/draft/write";
+	    			var params = "content=" + content;
+	    			http.open("POST", url, true);
+
+	    			//Send the proper header information along with the request
+	    			http.setRequestHeader("Content-type", "application/x-www-form-urlencoded");
+
+	    			http.onreadystatechange = function() {//Call a function when the state changes.
+	    			    if(http.readyState == 4 && http.status == 200) {
+	    			        alert(http.responseText);
+	    			    }
+	    			}
+	    			http.send(params);
+	    		});
         </script>
 	</body>
 </html>

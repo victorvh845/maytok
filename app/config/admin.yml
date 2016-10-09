@@ -8,6 +8,8 @@ easy_admin:
             class: AppBundle\Entity\Chapter
         Category:
             class: AppBundle\Entity\Category
+        Draft:
+            class: AppBundle\Entity\Draft
         Article:
             class: AppBundle\Entity\Article
             form:
