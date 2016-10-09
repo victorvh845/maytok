@@ -9,7 +9,16 @@
     <div id="custom-header" class="site-background"
          data-image={{ asset('img/feliz_ano_novo_by_aarontyree-d5q0apk.jpg') }} data-opacity="0.80" data-color="181a25">
         <div id="tagline" class="site-tagline row">
-            <h1>Valonde &amp; NeoParis</h1>
+            <div class="header-container">
+                <h1 id="joer">
+                    <span id="typed-strings">
+                        <p>Maytok </p>
+                        <p>NeoParis </p>
+                        <p>Titán </p>
+                    </span>
+                    <span id="typed"></span>
+                </h1>
+            </div>
             <h2>Reimagina por completo la historia de la Humanidad</h2>
         </div>
     </div>
@@ -230,6 +239,17 @@
             offset: +10
         }, function () {
             console.log('WOOT WOOT, done!');
+        });
+        $(function(){
+            $("#typed").typed({
+                stringsElement: $('#typed-strings'),
+                loop: true,
+                typeSpeed: 150,
+                startDelay: 150,
+                backSpeed: 80,
+                showCursor: true,
+                cursorChar: "_",
+            });
         });
     </script>
 {% endblock %}  

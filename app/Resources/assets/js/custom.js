@@ -284,37 +284,6 @@ var mobileMenu = {
 	}
 };
 
-
-
-
-/*======================================================================================================
-	jQuery Nicescroll
-========================================================================================================*/
-var niceScrollInit = {
-	init: function(){
-
-	var _s = this;
-	_s.cursorColor = $('html').data('cursor');
-
-	var nice = $('html').niceScroll({
-        cursorcolor: "#"+_s.cursorColor || '#14ddb3', 
-        railpadding: {
-            top: 0,
-            right: 5,
-            left: 5,
-            bottom: 0
-        },
-        cursoropacitymin: 0,
-        scrollspeed: 100,
-        cursoropacitymax: 0.8,
-        cursorborderradius: '0px',
-        cursorwidth: '10px',
-        cursorborder: 'none',
-        background: ''
-    });
-   }
-};
-
 /*===============================================================================================
 	Initialise scripts on Screen Width
 =================================================================================================*/
@@ -347,13 +316,6 @@ $(document).ready( function(){
 	===========================================*/
 	var body = $('body'),
 	    lastScreenWidth = window.innerWidth;
-
-	if( IE == 8 ){
-		/* Disabled jQuery nicescroll in IE 8 due to a scroll bug */
-		// IE 8 Stuff
-	}else{
-		niceScrollInit.init();
-	}
 
 	screenSize();
 	$(window).resize( function(){
