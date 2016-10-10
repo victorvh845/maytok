@@ -260,12 +260,10 @@ class BaseController extends Controller
     public function draftAction()
     {
         $user = $this->getUser();
-        dump($user);
         //Get the user draft content
         $draft = $this->getDoctrine()
             ->getRepository('AppBundle:Draft')
             ->findOneBy(array('user' => $user));
-        dump($draft);
 
         $content = $draft->getContent();
 
